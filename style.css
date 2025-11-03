@@ -1,0 +1,255 @@
+/* ====== FONT & BASE RESET ====== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #0b0b0b;
+  color: #f1f1f1;
+  line-height: 1.6;
+}
+
+/* ====== NAVBAR ====== */
+nav {
+  width: 100%;
+  background: #121212;
+  box-shadow: 0 2px 10px rgba(255, 215, 0, 0.08);
+  padding: 15px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav h1 {
+  color: #d4af37; /* Gold title */
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: #f5f5f5;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #d4af37; /* Gold hover */
+}
+
+/* ====== MAIN CONTAINER ====== */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.1);
+}
+
+/* ====== HOME SECTION ====== */
+.home {
+  text-align: center;
+  padding: 20px;
+}
+
+.home img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #d4af37; /* gold border */
+}
+
+.home h2 {
+  color: #f9f9f9;
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.home p {
+  color: #ccc;
+  font-size: 1rem;
+}
+
+/* ====== BUTTON / LINK STYLES ====== */
+.links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.links a {
+  display: inline-block;
+  margin: 8px;
+  padding: 10px 22px;
+  background: #d4af37; /* gold */
+  color: #000;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.links a:hover {
+  background: #e0c85d;
+  color: #000;
+}
+
+/* ====== CERTIFICATES ====== */
+.certificates {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.cert-card {
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 10px;
+  text-align: center;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+}
+
+.cert-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.cert-card h3 {
+  color: #f2f2f2;
+  font-size: 1.1rem;
+}
+
+/* ====== PDF / DOCUMENT LINKS ====== */
+.pdf-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pdf-links a {
+  text-decoration: none;
+  background: #2a2a2a;
+  color: #d4af37;
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: 0.3s;
+  font-weight: 500;
+  border: 1px solid #d4af37;
+}
+
+.pdf-links a:hover {
+  background: #d4af37;
+  color: #000;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  background: #121212;
+  color: #d4d4d4;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  border-top: 1px solid #2c2c2c;
+  margin-top: 40px;
+}
+
+/* ===== Documents Page ===== */
+.content {
+  padding: 40px;
+  text-align: center;
+}
+
+.cv-container {
+  margin: 20px 0;
+}
+
+.btn {
+  background-color: #d4af37;
+  color: #000;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 6px;
+  margin: 8px;
+  display: inline-block;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #e0c85d;
+  box-shadow: 0 0 10px #d4af37;
+}
+
+.btn.secondary {
+  background-color: #1f9d55;
+  color: white;
+}
+
+.btn.secondary:hover {
+  background-color: #2bb673;
+}
+
+.cv-preview {
+  margin-top: 30px;
+  border: 2px solid #444;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* ===== Social Links Page ===== */
+.social-container {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-btn {
+  text-decoration: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  color: black;
+  background-color: #d4af37;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.social-btn:hover {
+  background-color: #e0c85d;
+  transform: translateY(-3px);
+  box-shadow: 0 0 10px #d4af37;
+}
+
+/* Footer (duplicate section fixed) */
+footer {
+  background-color: #121212;
+  color: #aaa;
+  font-size: 0.9rem;
+  border-top: 1px solid #2c2c2c;
+}
