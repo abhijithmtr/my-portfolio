@@ -1,255 +1,495 @@
-/* ====== FONT & BASE RESET ====== */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+/* ==== GOOGLE FONT ==== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-  background-color: #0b0b0b;
-  color: #f1f1f1;
-  line-height: 1.6;
+  background: #ffffff;
+  color: #111;
 }
 
-/* ====== NAVBAR ====== */
-nav {
+/* ==== NAVBAR ==== */
+header {
   width: 100%;
-  background: #121212;
-  box-shadow: 0 2px 10px rgba(255, 215, 0, 0.08);
-  padding: 15px 60px;
+  padding: 20px 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 10;
 }
 
-nav h1 {
-  color: #d4af37; /* Gold title */
+.logo {
   font-size: 1.4rem;
   font-weight: 600;
 }
 
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 25px;
-}
-
-nav ul li a {
-  color: #f5f5f5;
+header nav a {
+  margin-left: 40px;
   text-decoration: none;
+  color: #222;
   font-weight: 500;
-  transition: color 0.3s ease;
+  position: relative;
 }
 
-nav ul li a:hover {
-  color: #d4af37; /* Gold hover */
+header nav a:hover,
+header nav a.active {
+  color: #0d9488;
 }
 
-/* ====== MAIN CONTAINER ====== */
-.container {
-  width: 90%;
-  max-width: 1000px;
-  margin: 40px auto;
-  background: #1a1a1a;
-  border-radius: 12px;
-  padding: 40px;
-  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.1);
+header nav a.active::after,
+header nav a:hover::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #0d9488;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
 }
 
-/* ====== HOME SECTION ====== */
-.home {
-  text-align: center;
-  padding: 20px;
+/* ==== HERO SECTION ==== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 100px;
+  gap: 60px;
 }
 
-.home img {
-  width: 140px;
-  height: 140px;
+.left .profile-img {
+  width: 330px;
+  height: 330px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 15px;
-  border: 3px solid #d4af37; /* gold border */
 }
 
-.home h2 {
-  color: #f9f9f9;
-  font-size: 1.8rem;
-  margin-bottom: 8px;
+.hello {
+  font-size: 1.2rem;
+  color: #444;
 }
 
-.home p {
-  color: #ccc;
-  font-size: 1rem;
+.name {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 5px 0;
 }
 
-/* ====== BUTTON / LINK STYLES ====== */
-.links {
-  text-align: center;
-  margin-top: 20px;
+.role {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 25px;
 }
 
-.links a {
-  display: inline-block;
-  margin: 8px;
-  padding: 10px 22px;
-  background: #d4af37; /* gold */
-  color: #000;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s ease;
-}
-
-.links a:hover {
-  background: #e0c85d;
-  color: #000;
-}
-
-/* ====== CERTIFICATES ====== */
-.certificates {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-}
-
-.cert-card {
-  background: #1e1e1e;
-  border: 1px solid #333;
-  border-radius: 10px;
-  text-align: center;
-  padding: 15px;
-  transition: all 0.3s ease;
-}
-
-.cert-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
-}
-
-.cert-card img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.cert-card h3 {
-  color: #f2f2f2;
-  font-size: 1.1rem;
-}
-
-/* ====== PDF / DOCUMENT LINKS ====== */
-.pdf-links {
+/* ==== BUTTONS ==== */
+.btn-group {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  gap: 15px;
+  margin-bottom: 25px;
 }
 
-.pdf-links a {
-  text-decoration: none;
-  background: #2a2a2a;
-  color: #d4af37;
-  padding: 10px 15px;
-  border-radius: 6px;
-  transition: 0.3s;
-  font-weight: 500;
-  border: 1px solid #d4af37;
-}
-
-.pdf-links a:hover {
-  background: #d4af37;
-  color: #000;
-}
-
-/* ====== FOOTER ====== */
-footer {
-  background: #121212;
-  color: #d4d4d4;
-  text-align: center;
-  padding: 15px;
-  font-size: 0.9rem;
-  border-top: 1px solid #2c2c2c;
-  margin-top: 40px;
-}
-
-/* ===== Documents Page ===== */
-.content {
-  padding: 40px;
-  text-align: center;
-}
-
-.cv-container {
-  margin: 20px 0;
-}
-
-.btn {
-  background-color: #d4af37;
-  color: #000;
+.btn-outline {
   padding: 12px 24px;
+  border: 2px solid #111;
+  border-radius: 30px;
   text-decoration: none;
-  border-radius: 6px;
-  margin: 8px;
-  display: inline-block;
-  font-weight: 600;
-  transition: 0.3s;
+  color: #111;
+  font-weight: 500;
 }
 
-.btn:hover {
-  background-color: #e0c85d;
-  box-shadow: 0 0 10px #d4af37;
-}
-
-.btn.secondary {
-  background-color: #1f9d55;
+.btn-outline:hover {
+  background: #111;
   color: white;
 }
 
-.btn.secondary:hover {
-  background-color: #2bb673;
+.btn-filled {
+  padding: 12px 28px;
+  background: #111;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
 }
 
-.cv-preview {
-  margin-top: 30px;
-  border: 2px solid #444;
-  border-radius: 8px;
-  overflow: hidden;
+.btn-filled:hover {
+  background: #333;
 }
 
-/* ===== Social Links Page ===== */
-.social-container {
-  margin-top: 30px;
+/* ==== SOCIAL ICONS ==== */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  padding: 8px;
+  border-radius: 50%;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+}
+
+/* next */
+
+/* ===== PROJECTS PAGE ===== */
+
+.projects-section {
+  padding: 40px 70px;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+}
+
+/* CARD */
+.project-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #dedede;
+  padding-bottom: 15px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
+
+/* Project Image */
+.project-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 13px 13px 0 0;
+}
+
+/* Title */
+.project-title {
+  font-size: 1.1rem;
+  text-align: center;
+  margin: 15px 0;
+  font-weight: 500;
+}
+
+/* Footer section inside card */
+.project-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 18px;
+}
+
+/* View Project button */
+.view-btn {
+  background: #ffffff;
+  padding: 10px 18px;
+  border: 2px solid #111;
+  border-radius: 25px;
+  color: #111;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.view-btn:hover {
+  background: #111;
+  color: #fff;
+}
+
+/* Yellow button style for Excel project */
+.view-yellow {
+  border: 2px solid #d4a015;
+}
+
+.view-yellow:hover {
+  background: #d4a015;
+  color: #fff;
+}
+
+/* Tool icon (Power BI / Excel) */
+.tool-icon {
+  width: 32px;
+  height: 32px;
+}
+
+/* next */
+
+/* ===== CERTIFICATES PAGE ===== */
+
+.cert-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+  padding: 0 60px 60px;
+}
+
+.cert-card {
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+}
+
+.cert-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0px 4px 14px rgba(0,0,0,0.1);
+}
+
+.cert-name {
+  margin-top: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+
+/* ===== MODAL POP-UP ===== */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 40px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 70%;
+  max-width: 900px;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+/* =============== SKILLS PAGE =============== */
+/* ===== SKILLS PAGE (Smooth Pro Animations) ===== */
+
+.skills-page {
+  padding: 60px 80px;
+  text-align: center;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Subtitle Fade-in */
+.skills-subtitle {
+  font-size: 1rem;
+  color: #666;
+  opacity: 0;
+  animation: fadeUp 0.9s ease-out forwards;
+}
+
+/* Title Slide-down */
+.skills-title {
+  font-size: 2.3rem;
+  font-weight: 600;
+  margin-top: 5px;
+  opacity: 0;
+  animation: slideDown 0.9s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+/* Skills container */
+.skills-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 20px 30px;
+  margin-top: 25px;
 }
 
-.social-btn {
-  text-decoration: none;
-  padding: 12px 30px;
-  font-size: 1.1rem;
-  border-radius: 8px;
-  color: black;
-  background-color: #d4af37;
-  transition: 0.3s;
+/* Skill Cards */
+.skill-box {
+  padding: 12px 28px;
+  border: 2px solid #111;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  background: #fff;
+  transition: 0.25s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+/* Stagger effect (each skill appears one after another) */
+.skill-box:nth-child(1) { animation-delay: 0.15s; }
+.skill-box:nth-child(2) { animation-delay: 0.25s; }
+.skill-box:nth-child(3) { animation-delay: 0.35s; }
+.skill-box:nth-child(4) { animation-delay: 0.45s; }
+.skill-box:nth-child(5) { animation-delay: 0.55s; }
+.skill-box:nth-child(6) { animation-delay: 0.65s; }
+.skill-box:nth-child(7) { animation-delay: 0.75s; }
+.skill-box:nth-child(8) { animation-delay: 0.85s; }
+.skill-box:nth-child(9) { animation-delay: 0.95s; }
+.skill-box:nth-child(10) { animation-delay: 1.05s; }
+.skill-box:nth-child(11) { animation-delay: 1.15s; }
+.skill-box:nth-child(12) { animation-delay: 1.25s; }
+
+/* Hover effect */
+.skill-box:hover {
+  background: #111;
+  color: white;
+  transform: translateY(-6px);
+  box-shadow: 0px 10px 18px rgba(0,0,0,0.15);
+  cursor: pointer;
+}
+
+/* ===== REUSABLE ANIMATIONS ===== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* social */
+
+/* ===== CONTACT PAGE (Smooth Pro Animations) ===== */
+
+.contact-page {
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-box {
+  max-width: 700px;
+  width: 100%;
+  text-align: left;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Heading Animation */
+.contact-heading {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
   font-weight: 600;
+  color: #111;
+  opacity: 0;
+  animation: slideDown 0.8s ease-out forwards;
 }
 
-.social-btn:hover {
-  background-color: #e0c85d;
-  transform: translateY(-3px);
-  box-shadow: 0 0 10px #d4af37;
+/* Body text animation */
+.contact-text {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 35px;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.2s;
 }
 
-/* Footer (duplicate section fixed) */
-footer {
-  background-color: #121212;
-  color: #aaa;
-  font-size: 0.9rem;
-  border-top: 1px solid #2c2c2c;
+/* Smooth fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Slide down animation */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Social icon container */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Social icon buttons */
+.social-icon {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 12px;
+  text-decoration: none;
+  padding: 14px 22px;
+  border-radius: 12px;
+  color: white;
+  font-weight: 500;
+  background: #111;
+  transition: 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Delay animation for each icon */
+.social-icon:nth-child(1) { animation-delay: 0.3s; }
+.social-icon:nth-child(2) { animation-delay: 0.45s; }
+.social-icon:nth-child(3) { animation-delay: 0.6s; }
+.social-icon:nth-child(4) { animation-delay: 0.75s; }
+
+/* Social icon images */
+.social-icon img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Platform colors */
+.linkedin { background: #0A66C2; }
+.instagram { background: #E1306C; }
+.github { background: #24292e; }
+.email { background: #FF9800; }
+
+/* Hover animation */
+.social-icon:hover {
+  transform: translateX(8px);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+  opacity: 0.95;
 }

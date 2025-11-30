@@ -3,98 +3,90 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Certificates - Abhijith K</title>
+  <title>Certificates | Abhijith K</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      background-color: #0e0e0e;
-      color: white;
-      font-family: "Poppins", sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background-color: #1a1a1a;
-      padding: 15px 0;
-      text-align: center;
-      border-bottom: 2px solid #bfa34a;
-    }
-
-    header h1 {
-      color: #bfa34a;
-      margin: 0;
-    }
-
-    .certificate-container {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .certificate {
-      background-color: #1a1a1a;
-      border: 1px solid #bfa34a;
-      border-radius: 10px;
-      padding: 20px;
-      margin-bottom: 25px;
-      box-shadow: 0 0 15px rgba(191, 163, 74, 0.2);
-    }
-
-    .certificate h3 {
-      color: #fff;
-      margin-bottom: 10px;
-    }
-
-    .btn {
-      text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 6px;
-      margin: 5px;
-      font-weight: 500;
-      transition: 0.3s;
-      display: inline-block;
-    }
-
-    .view-btn {
-      background-color: #bfa34a;
-      color: black;
-    }
-
-    .view-btn:hover {
-      background-color: #e2c766;
-    }
-
-    .download-btn {
-      background-color: transparent;
-      color: #bfa34a;
-      border: 1px solid #bfa34a;
-    }
-
-    .download-btn:hover {
-      background-color: #bfa34a;
-      color: black;
-    }
-  </style>
 </head>
+
 <body>
+
+  <!-- NAVBAR -->
   <header>
-    <h2>MY CERTIFICATES</h2>
+    <h2 class="logo">Abhijith's Portfolio</h2>
+    <nav>
+      <a href="index.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="certificates.html" class="active">Certificates</a>
+      <a href="social.html">Contact</a>
+    </nav>
   </header>
 
-  <div class="certificate-container">
-    <!-- <div class="certificate">
-      <!-- <h3>Data Analytics Course Certificate</h3>
-      <a href="certificates/certificate1.pdf" target="_blank" class="btn view-btn">👁️ View</a>
-      <a href="certificates/certificate1.pdf" download class="btn download-btn">⬇️ Download</a> -->
-    <!-- </div> --> 
 
-    <div class="certificate">
-      <h3>Academic Project Certificate</h3>
-      <a href="certificates\riss.pdf" target="_blank" class="btn view-btn">👁️ View</a>
-      <a href="certificates\riss.pdf" download class="btn download-btn">⬇️ Download</a>
+  <!-- PAGE TITLE -->
+  <h2 class="cert-title">Awards & Certificates</h2>
+
+
+  <!-- CERTIFICATES GRID -->
+  <section class="cert-grid">
+
+    <!-- CARD 1 -->
+  <div class="cert-card" onclick="openModal('certificates/certificate_page_1.png')">
+  <img src="certificates/certificate_page_1.png" class="cert-img">
+  <p class="cert-name"></p>
+</div>
+
     </div>
+
+    <!-- CARD 2 -->
+    <div class="cert-card" onclick="openModal('certificates/certificate.png')">
+      <img src="certificates/certificate.png" class="cert-img">
+      <p class="cert-name"></p>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="cert-card" onclick="openModal('certificates/certificate2.png')">
+      <img src="certificates/certificate2.png" class="cert-img">
+      <p class="cert-name"></p>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="cert-card" onclick="openModal('certificates/certificate3.png')">
+      <img src="certificates/certificate3.png" class="cert-img">
+      <p class="cert-name"></p>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="cert-card" onclick="openModal('certificates/powerbiworkshop.png')">
+      <img src="certificates/powerbiworkshop.png" class="cert-img">
+      <p class="cert-name"></p>
+    </div>
+
+    <!-- CARD 6-->
+   <div class="cert-card" onclick="openModal('certificates/hacker_sqlbasic.png')">
+      <img src="certificates/hacker_sqlbasic.png" class="cert-img">
+      <p class="cert-name"></p>
+    </div>
+
+  <section>
+
+
+  <!-- ===== POPUP MODAL ===== -->
+  <div id="imgModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="modalImg" class="modal-content">
   </div>
+
+
+  <script>
+    function openModal(src) {
+      document.getElementById("imgModal").style.display = "block";
+      document.getElementById("modalImg").src = src;
+    }
+
+    function closeModal() {
+      document.getElementById("imgModal").style.display = "none";
+    }
+  </script>
+
 </body>
 </html>

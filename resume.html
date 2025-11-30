@@ -1,48 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Documents</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume | Abhijith K</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <!-- Navigation bar -->
-  <nav class="navbar">
-    <ul>
+
+  <!-- NAVBAR -->
+  <!-- <nav class="top-nav">
+    <h1 class="logo">Abhijith K</h1>
+    <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="social.html">Social Links</a></li>
+      <li><a href="projects.html">Projects</a></li>
       <li><a href="certificates.html">Certificates</a></li>
-      <!-- <li><a href="documents.html" class="active">Documents</a></li> -->
+      <li><a href="social.html">Social</a></li>
+      <li><a href="resume.html">Resume</a></li>
     </ul>
-  </nav>
+  </nav> -->
 
-  <!-- Cover image -->
-  <header class="cover documents-cover">
-    <!-- <h1>My Documents</h1> -->
-  </header>
+  <section class="hero">
+    <div class="profile-card" style="max-width:700px;">
 
-  <!-- Main content -->
-  <section class="content">
-    <h3>📄 MY RESUME </h3>
-    <p>Below you can view or download my resume.</p>
+      <h2 class="name">My Resume</h2>
+      <p class="role">View or download my complete resume below</p>
 
-    <div class="cv-container">
-      <!-- View CV button -->
-      <a href="certificates\CV new_2.pdf" target="_blank" class="btn">View CV</a>
+      <a href="certificates\CV new_2.pdf" target="_blank" class="btn primary">View Resume</a>
+      <a href="certificates\CV new_2.pdf" download class="btn secondary">Download</a>
 
-      <!-- Download CV button -->
-      <a href="certificates\CV new_2.pdf" download class="btn secondary">Download CV</a>
     </div>
-
-    <!-- (Optional) Show PDF directly inside the page -->
-    <!-- <div class="cv-preview">
-      <iframe src="certificates\CV new_2.pdf" width="100%" height="600px"></iframe>
-    </div> -->
   </section>
 
-  <footer>
-    <p>© 2025 Your Name | All Rights Reserved</p>
-  </footer>
 </body>
 </html>

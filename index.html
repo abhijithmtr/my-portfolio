@@ -1,106 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abhijith K | Data Analyst</title>
-  <style>
-    body {
-      background-color: #0b0b0b;
-      color: #e5e5e5;
-      font-family: "Poppins", sans-serif;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
-    }
-
-    .profile-photo {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      border: 3px solid #bfa34a;
-      object-fit: cover;
-      margin-bottom: 20px;
-      transition: 0.4s;
-    }
-    .profile-photo:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 15px #bfa34a;
-    }
-
-    h1 {
-      font-size: 2.8em;
-      font-weight: 700;
-      background: linear-gradient(90deg, #bfa34a, #e2c766);
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 10px;
-    }
-
-    h2 {
-      font-size: 1.2em;
-      color: #bfa34a;
-      margin-bottom: 20px;
-    }
-
-    p {
-      max-width: 600px;
-      font-size: 1em;
-      color: #cccccc;
-      line-height: 1.6;
-      margin-bottom: 40px;
-    }
-
-    .nav-links {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-bottom: 40px;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: #bfa34a;
-      border: 1px solid #bfa34a;
-      padding: 10px 20px;
-      border-radius: 25px;
-      transition: 0.3s;
-      font-weight: 500;
-    }
-
-    .nav-links a:hover {
-      background-color: #bfa34a;
-      color: #000;
-      box-shadow: 0 0 10px #bfa34a;
-      transform: translateY(-3px);
-    }
-
-    footer {
-      font-size: 0.9em;
-      color: #777;
-      margin-top: 20px;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhijith K | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <img src="image\Gemini_Generated_Image_6m3xe76m3xe76m3x.png" alt="Abhijith K" class="profile-photo" />
-  <h1>Abhijith K</h1>
-  <h2>Aspiring Data Analyst</h2>
-  <p>“I love turning raw data into useful insights that drive smart business decisions.”</p>
 
-  <div class="nav-links">
-    <!-- <a href="index.html">Home</a> -->
-    <a href="social.html">Social Links</a>
-    <a href="certificates.html">Certificates</a>
-    <a href="resume.html">Resume</a>
-  </div>
+  <!-- HEADER / NAVBAR -->
+  <header>
+    <h2 class="logo">Abhijith's Portfolio</h2>
+    <nav>
+      <a href="#" class="active">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="certificates.html">Certificates</a>
+      <a href="social.html">Contact</a>
+    </nav>
+  </header>
 
-  <!-- <footer>Scroll down to explore my achievements</footer> -->
+  <!-- HERO SECTION -->
+  <section class="hero">
+
+    <div class="left">
+      <img src="image\mypic_1.png" alt="Profile Photo" class="profile-img">
+    </div>
+
+    <div class="right">
+      <p class="hello">Hello, I'm</p>
+      <h1 class="name">Abhijith K</h1>
+      <h3 class="role">Data Analyst</h3>
+
+      <div class="btn-group">
+        <a href="certificates\CV new_2.pdf" class="btn-outline">Download Resume</a>
+        <a href="social.html" class="btn-filled"> Let's Connect</a>
+      </div>
+
+      <div class="social-icons">
+        <a href="https://linkedin.com/in/abhijith-k-b2700a395"><img src="image\newlinkdin.png"></a>
+        <a href="mailto:abhimattanur2004@gmail.com"><img src="image\gmail.png"></a>
+      </div>
+    </div>
+
+  </section>
+
 </body>
 </html>
