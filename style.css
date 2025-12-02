@@ -397,99 +397,233 @@ html {
 
 /* social */
 
-/* ===== CONTACT PAGE (Smooth Pro Animations) ===== */
-
+/* ===== CLEAN CONTACT PAGE (Platform Colors + Smaller Icons) ===== */
 .contact-page {
   padding: 80px 20px;
   display: flex;
   justify-content: center;
+  background: #ffffff;
 }
 
 .contact-box {
   max-width: 700px;
   width: 100%;
+  background: #ffffff;
+  padding: 40px 45px;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
   text-align: left;
-  animation: fadeIn 0.8s ease-out forwards;
+  animation: fadeIn 0.6s ease-out;
 }
 
-/* Heading Animation */
 .contact-heading {
-  font-size: 2.4rem;
-  margin-bottom: 20px;
-  font-weight: 600;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 18px;
   color: #111;
-  opacity: 0;
-  animation: slideDown 0.8s ease-out forwards;
 }
 
-/* Body text animation */
 .contact-text {
   font-size: 1rem;
-  color: #444;
+  color: #555;
   line-height: 1.7;
-  margin-bottom: 35px;
-  opacity: 0;
-  animation: fadeIn 1s ease-out forwards;
-  animation-delay: 0.2s;
+  margin-bottom: 32px;
 }
 
-/* Smooth fade animation */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Slide down animation */
-@keyframes slideDown {
-  from { opacity: 0; transform: translateY(-15px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Social icon container */
+/* Social links */
 .social-links {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 14px;
+  align-items: flex-start;      /* align buttons left */
 }
 
-/* Social icon buttons */
+/* Social icon button */
 .social-icon {
   display: flex;
   align-items: center;
-  width: fit-content;
-  gap: 12px;
-  text-decoration: none;
-  padding: 14px 22px;
+  gap: 10px;
+
+  width: 220px;                 /* 🔥 SMALLER BUTTON */
+  padding: 12px 18px;
   border-radius: 12px;
-  color: white;
+
+  background: #ffffff;
+  text-decoration: none;
+  color: #fff;
   font-weight: 500;
-  background: #111;
-  transition: 0.3s ease;
-  opacity: 0;
-  animation: fadeIn 0.8s ease-out forwards;
+  transition: 0.25s ease;
+
+  position: relative;
+  overflow: hidden;             /* Needed for ripple effect */
 }
 
-/* Delay animation for each icon */
-.social-icon:nth-child(1) { animation-delay: 0.3s; }
-.social-icon:nth-child(2) { animation-delay: 0.45s; }
-.social-icon:nth-child(3) { animation-delay: 0.6s; }
-.social-icon:nth-child(4) { animation-delay: 0.75s; }
-
-/* Social icon images */
+/* MUCH SMALLER ICONS */
 .social-icon img {
-  width: 32px;
-  height: 32px;
+  width: 18px;
+  height: 18px;
 }
 
-/* Platform colors */
-.linkedin { background: #0A66C2; }
+/* Platform Specific Colors */
+.linkedin  { background: #0A66C2; }
+.email     { background: #FF9800; }
 .instagram { background: #E1306C; }
-.github { background: #24292e; }
-.email { background: #FF9800; }
+.github    { background: #24292e; }
 
-/* Hover animation */
+/* Hover effect */
 .social-icon:hover {
-  transform: translateX(8px);
-  box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
-  opacity: 0.95;
+  transform: translateX(6px);
+  opacity: 0.9;
+}
+
+/* SUPER CLICK ANIMATION (Ripple) */
+.social-icon:active::after {
+  content: "";
+  position: absolute;
+  width: 180%;
+  height: 180%;
+  background: rgba(255,255,255,0.4);
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripple 0.4s ease-out forwards;
+}
+
+@keyframes ripple {
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}
+
+
+/* Add on index */
+
+/* ===== FLOATING INTRO ANIMATION ===== */
+
+.hero .hello,
+.hero .name,
+.hero .role {
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* delays so text appears one-by-one */
+.hero .hello { animation-delay: 0.2s; }
+.hero .name { animation-delay: 0.4s; }
+.hero .role { animation-delay: 0.6s; }
+
+/* Floating effect */
+.floating-text {
+  animation: floatText 3s ease-in-out infinite;
+}
+
+/* Slide up fade animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Floating up & down effect */
+@keyframes floatText {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+
+/* ============================
+      MOBILE RESPONSIVE CSS
+   ============================ */
+
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  header {
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px 20px;
+    text-align: center;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+    margin: 0 6px;
+  }
+
+  /* HERO SECTION */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hero .left img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* TITLE TEXT */
+  .typing-text {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  /* SKILLS PAGE */
+  .skills-container {
+    gap: 14px;
+  }
+
+  .skill-box {
+    padding: 10px 18px;
+    font-size: 0.85rem;
+  }
+
+  /* PROJECT CARDS */
+  .projects-container {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  /* CERTIFICATES */
+  .cert-grid {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .cert-card {
+    margin-bottom: 20px;
+  }
+
+  /* CONTACT PAGE */
+  .contact-box {
+    padding: 30px 22px;
+    box-shadow: none;
+  }
+
+  .social-icon {
+    width: 100%;        /* full width on mobile */
+    justify-content: center;
+  }
+
+  .social-icon img {
+    width: 16px;
+    height: 16px;
+  }
 }
